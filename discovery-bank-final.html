@@ -1225,6 +1225,8 @@ function doLogout() {
 // APP LAUNCH
 // ══════════════════════════════════════════════
 function launchApp(name, initials) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
+  document.getElementById('app').classList.remove('hidden');
   document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('util-name').textContent = name;
