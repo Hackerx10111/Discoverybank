@@ -1,0 +1,22 @@
+# ============================================================
+# Discovery Bank AI Assistant — Python Requirements
+# ============================================================
+# Install: pip install -r requirements.txt
+# Run:     python server.py
+# Prod:    gunicorn server:app
+# ============================================================
+
+# Web framework
+flask==3.0.3
+
+# CORS (allows browser to call /api/chat from any origin)
+flask-cors==4.0.1
+
+# Environment variable management (.env file support)
+python-dotenv==1.0.1
+
+# HTTP client (used to call Groq API server-side)
+requests==2.32.3
+
+# Production WSGI server (Render / Heroku / Railway use this)
+gunicorn==22.0.0
