@@ -541,7 +541,7 @@ pip install -r requirements.txt && python server.py
 
 ## 👤 Author
 
-**Lethabo Sithole**  
+**Thamsanqa Nzimande**  
 Individual Project — AI Solution for Finance Industry
 
 ---
