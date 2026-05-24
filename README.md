@@ -1,5 +1,5 @@
 # 🏦 Discovery Bank AI Financial Assistant
-link-https://discoverybank-3.onrender.com
+link https://discoverybank-3.onrender.com
 <div align="center">
 
 ![Discovery Bank](https://img.shields.io/badge/Discovery-Bank-E31C79?style=for-the-badge&logoColor=white)
