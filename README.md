@@ -11,7 +11,7 @@ link https://discoverybank-3.onrender.com
 **An end-to-end AI-powered banking assistant prototype built for Discovery Bank South Africa.**  
 Built with Flask · Groq AI (LLaMA 3.3 70B) · Vanilla HTML/CSS/JS · Deployed on Render
 
-[Live Demo](https://discoverybank-2.onrender.com) · [Report Bug](https://github.com/Hackerx10111/Discoverybank/issues) · [Request Feature](https://github.com/Hackerx10111/Discoverybank/issues)
+[Live Demo](http://discovery-9efs.onrender.com/) · [Report Bug](https://github.com/Hackerx10111/Discoverybank/issues) · [Request Feature](https://github.com/Hackerx10111/Discoverybank/issues)
 
 </div>
 
