@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Discovery Bank | Shared-Value Banking</title>
+<title>Student Project Demo | Discovery Bank UI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -503,6 +503,15 @@ a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
+<div id="disclaimer-banner" style="position:fixed;top:0;left:0;right:0;
+z-index:99999;background:#f59e0b;color:#000;padding:10px 20px;
+font-size:13px;font-weight:600;text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;gap:12px;">
+  <span>⚠️ <strong>SCHOOL PROJECT — EDUCATIONAL DEMO ONLY.</strong> Student web development assignment. Not affiliated with Discovery Bank Limited. No real data is collected.</span>
+  <button onclick="document.getElementById('disclaimer-banner').style.display='none'"
+    style="background:rgba(0,0,0,0.15);border:none;border-radius:4px;padding:2px 8px;cursor:pointer;font-size:13px;font-weight:700;flex-shrink:0;">✕</button>
+</div>
+<div id="disclaimer-spacer" style="height:44px"></div>
 
 <!-- ══════════════════ HOME SCREEN ══════════════════ -->
 <div id="screen-home" class="screen">
@@ -522,8 +531,8 @@ a:hover{text-decoration:underline}
       <a href="#">Business</a>
     </div>
     <div class="nav-ctas">
-      <button class="btn-ghost" onclick="showScreen('screen-login')">Sign In</button>
-      <button class="btn-primary" onclick="showScreen('screen-signup')">Open Account</button>
+      <button class="btn-ghost" onclick="showScreen('project-demo-login')">Sign In</button>
+      <button class="btn-primary" onclick="showScreen('project-demo-signup')">Open Account</button>
     </div>
   </nav>
 
@@ -535,8 +544,8 @@ a:hover{text-decoration:underline}
         <h1>Banking that<br/><em>rewards you</em><br/>for good choices</h1>
         <p class="hero-sub">Earn Vitality rewards on every purchase, grow your savings with a Dynamic Interest Rate up to 10.75%, and get personalised AI financial advice — all in one account.</p>
         <div class="hero-ctas">
-          <button class="btn-primary lg" onclick="showScreen('screen-signup')">Open a Free Account</button>
-          <button class="btn-outline-green" onclick="showScreen('screen-login')">Sign In</button>
+          <button class="btn-primary lg" onclick="showScreen('project-demo-signup')">Open a Free Account</button>
+          <button class="btn-outline-green" onclick="showScreen('project-demo-login')">Sign In</button>
         </div>
       </div>
       <div class="hero-card hero-card-panel">
@@ -675,8 +684,8 @@ a:hover{text-decoration:underline}
     <h2>Ready to bank smarter?</h2>
     <p>Join over 800,000 South Africans already earning rewards with Discovery Bank.</p>
     <div class="cta-banner-btns">
-      <button class="btn-white" onclick="showScreen('screen-signup')">Open a Free Account</button>
-      <button class="btn-white-outline" onclick="showScreen('screen-login')">Sign In</button>
+      <button class="btn-white" onclick="showScreen('project-demo-signup')">Open a Free Account</button>
+      <button class="btn-white-outline" onclick="showScreen('project-demo-login')">Sign In</button>
     </div>
   </section>
 
@@ -696,7 +705,7 @@ a:hover{text-decoration:underline}
 </div>
 
 <!-- ══════════════════ SIGN UP SCREEN ══════════════════ -->
-<div id="screen-signup" class="screen hidden">
+<div id="project-demo-signup" class="screen hidden">
   <div class="auth-screen">
     <div class="auth-topbar">
       <button class="back-btn" onclick="showScreen('screen-home')">← Back</button>
@@ -842,7 +851,7 @@ a:hover{text-decoration:underline}
             </div>
           </div>
 
-          <div class="auth-switch">Already have an account? <a href="#" onclick="showScreen('screen-login');return false">Sign in</a></div>
+          <div class="auth-switch">Already have an account? <a href="#" onclick="showScreen('project-demo-login');return false">Sign in</a></div>
           <div class="auth-security">🔒 Your data is protected under POPIA and FICA</div>
         </div>
       </div>
@@ -851,7 +860,7 @@ a:hover{text-decoration:underline}
 </div>
 
 <!-- ══════════════════ LOGIN SCREEN ══════════════════ -->
-<div id="screen-login" class="screen hidden">
+<div id="project-demo-login" class="screen hidden">
   <div class="auth-screen">
     <div class="auth-topbar">
       <button class="back-btn" onclick="showScreen('screen-home')">← Back</button>
@@ -895,7 +904,7 @@ a:hover{text-decoration:underline}
           <button class="auth-submit" style="background:var(--gray-100);color:var(--gray-800);border:1px solid var(--gray-300)" onclick="doDemoLogin()">
             🎮 Try Demo Account
           </button>
-          <div class="auth-switch">Don't have an account? <a href="#" onclick="showScreen('screen-signup');return false">Open one free</a></div>
+          <div class="auth-switch">Don't have an account? <a href="#" onclick="showScreen('project-demo-signup');return false">Open one free</a></div>
           <div class="auth-security">🔒 256-bit SSL · Protected by Discovery Secure</div>
         </div>
       </div>
@@ -910,7 +919,7 @@ a:hover{text-decoration:underline}
     <a href="#">Business</a><span class="utility-sep">|</span>
     <a href="#">Help &amp; Support</a><span class="utility-sep">|</span>
     <a href="#">0860 000 628</a><span class="utility-sep">|</span>
-    <div class="utility-user"><div class="utility-avatar" id="util-avatar">LS</div> <span id="util-name">Lethabo Sithole</span></div>
+    <div class="utility-user"><div class="utility-avatar" id="util-avatar">--</div> <span id="util-name">My Account</span></div>
     <span class="utility-sep">|</span>
     <a href="#" onclick="doLogout();return false">Sign Out</a>
   </div>
@@ -1000,7 +1009,7 @@ a:hover{text-decoration:underline}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
         </div>
-        <div class="input-disclaimer">⚡ Powered by Groq (Llama 3.3 70B) · Key secured server-side · Discovery Bank</div>
+        <div class="input-disclaimer">⚡ AI Assistant · School project demo · No data collected</div>
       </div>
       <!-- DASHBOARD -->
       <div id="view-dashboard" class="view"></div>
@@ -1075,35 +1084,101 @@ const ACCOUNT_DATA = {
   ]
 };
 
-const SYSTEM_PROMPT = `You are the official Discovery Bank AI Financial Assistant, helping Lethabo Sithole.
+// ── Rule-based AI assistant (no API key required)
+function getBotReply(text) {
+  const q = text.toLowerCase();
+  const name = ACCOUNT_DATA.user.name.split(' ')[0];
 
-ACCOUNT DATA:
-- Transaction Account ****3841: R 24,380.50
-- Savings Account ****2207: R 51,200.00
-- Investment Portfolio ****9914: R 138,750.00
-- Credit Card ****7722: R 8,450.00 owed (limit R50,000)
-- Home Loan ****5590: R 890,000 outstanding (R9,200/month)
+  // Balance / account queries
+  if (q.match(/balance|how much|what.*have|transaction account|cheque/)) {
+    return `Your Transaction Account ****3841 currently has **R ${fmt(ACCOUNT_DATA.accounts.cheque.balance)}** available. Your Savings Account ****2207 holds **R ${fmt(ACCOUNT_DATA.accounts.savings.balance)}** earning 8.25% p.a. Combined liquid balance: **R ${fmt(ACCOUNT_DATA.accounts.cheque.balance + ACCOUNT_DATA.accounts.savings.balance)}**.`;
+  }
+  if (q.match(/saving|savings account/)) {
+    return `Your Discovery Bank Savings Account ****2207 has **R ${fmt(ACCOUNT_DATA.accounts.savings.balance)}** with a Dynamic Interest Rate of **8.25% p.a.** — that's roughly **R ${fmt(ACCOUNT_DATA.accounts.savings.balance * 0.0825 / 12)}/month** in interest. Reaching Platinum Vitality could unlock an extra +2.5%, taking you to 10.75%.`;
+  }
+  if (q.match(/invest|portfolio/)) {
+    return `Your Investment Portfolio ****9914 is valued at **R ${fmt(ACCOUNT_DATA.accounts.investment.balance)}**, up 4.2% this month. Discovery Invest automatically diversifies across local and global funds based on your risk profile.`;
+  }
+  if (q.match(/credit card|owed|debt/)) {
+    return `Your Discovery Credit Card ****7722 has **R ${fmt(Math.abs(ACCOUNT_DATA.accounts.credit.balance))} outstanding** of your R 50,000 limit — that's ${Math.round(Math.abs(ACCOUNT_DATA.accounts.credit.balance)/50000*100)}% utilisation. Keeping this below 30% (R 15,000) helps maintain your credit score. You earn Discovery Miles on every swipe!`;
+  }
+  if (q.match(/home loan|bond|mortgage/)) {
+    return `Your Home Loan ****5590 has **R 890,000 outstanding** at R 9,200/month. Making even one extra payment per year can significantly reduce the loan term. Discovery Bank offers a rate discount for Platinum Vitality members.`;
+  }
 
-FINANCIAL SNAPSHOT:
-- Monthly Income: R 38,000 | Monthly Spend: R 22,450 | Savings Rate: 24% | Credit Score: 742
-- Top spend: Groceries R4,200 | Dining R3,100 | Transport R2,800 | Utilities R3,200 | Shopping R4,100
+  // Spending
+  if (q.match(/spend|spending|budget|month/)) {
+    const pct = Math.round(ACCOUNT_DATA.monthlySpend / ACCOUNT_DATA.monthlyIncome * 100);
+    return `This month you've spent **R ${fmt(ACCOUNT_DATA.monthlySpend)}** against income of **R ${fmt(ACCOUNT_DATA.monthlyIncome)}** — that's ${pct}% of your income. Your top categories are Groceries (R 4,200), Shopping (R 4,100), Utilities (R 3,200), Dining (R 3,100), and Transport (R 2,800). Your savings rate is a healthy **${ACCOUNT_DATA.savingsRate}%**!`;
+  }
+  if (q.match(/groceri|woolworth|food/)) {
+    return `You spent **R 4,200 on groceries** this month. As a Gold Vitality member you get **10% HealthyFood cashback at Woolworths** — swipe your Discovery card there to earn it. Upgrading to Platinum bumps that to 20%.`;
+  }
+  if (q.match(/fuel|petrol|shell/)) {
+    return `You have **50% fuel cashback at Shell** with your Gold Vitality status — a great saving! Your last Shell fill was R 680. Reaching Platinum unlocks **75% cashback**, saving you even more every time you tank up.`;
+  }
+  if (q.match(/uber|transport|travel/)) {
+    return `Your transport spend this month is **R 2,800** including Uber rides. You can also redeem **Discovery Miles** for Uber trips — check the Rewards tab to see your Miles balance.`;
+  }
 
-RECENT TRANSACTIONS:
-- Today: Woolworths Food -R820 | Uber -R145
-- Yesterday: Salary +R38,000 | Nu Metro -R220
-- Mon: Shell Petrol -R680 | Vitality Cashback +R340
+  // Vitality
+  if (q.match(/vitality|points|status|rewards/)) {
+    return `You're on **Gold Vitality** with **6,800 / 10,000 points** — just **3,200 points** from Platinum! Active rewards: 50% Shell cashback ⛽, 25% off SAA & FlySafair ✈️, 10% Woolworths HealthyFood 🛒, 30% off Nu Metro 🎬, and 3 Bidvest lounge visits. Keep going!`;
+  }
+  if (q.match(/platinum|upgrade|how.*reach|get.*platinum/)) {
+    return `You need **3,200 more points** for Platinum. Fastest ways: gym visits earn 300 pts each 🏋️, staying within budget earns 500 pts/month 💰, on-time payments earn 200 pts/month ✅, and a health check is 500 pts once-off 🩺. Hit the gym twice a week for a month and you're basically there!`;
+  }
+  if (q.match(/flight|fly|airline|saa|flysafair/)) {
+    return `As a Gold member you get **25% off SAA and FlySafair flights** when paying with your Discovery card. Redeem your Discovery Miles for flights too. Upgrading to Platinum doubles this to **50% off** — that's a massive saving on your next holiday!`;
+  }
+  if (q.match(/lounge|airport|bidvest/)) {
+    return `You have **3 complimentary Bidvest Airport Lounge visits** remaining this year on your Gold status. Access any Bidvest lounge by presenting your Discovery credit card. Platinum members get unlimited lounge access — another great reason to push for those 3,200 points!`;
+  }
+  if (q.match(/cinema|nu metro|movie/)) {
+    return `Enjoy **30% off Nu Metro** cinemas with your Gold Vitality card — just pay with your Discovery credit card at the till. Your last visit was R 220 (after discount). A great perk for a night out! 🎬`;
+  }
 
-VITALITY: Gold status, 6,800/10,000 pts. Active: 50% Shell fuel cashback, 25% off SAA flights, 3 Bidvest lounge visits, 10% Woolworths HealthyFood, 30% Nu Metro.
+  // Credit score
+  if (q.match(/credit score|score|rating/)) {
+    return `Your credit score is **742 — Good standing** ✅. This puts you in a strong position for lending. To push it higher: keep credit card utilisation below 30% (yours is currently ${Math.round(Math.abs(ACCOUNT_DATA.accounts.credit.balance)/50000*100)}%), pay all accounts on time, and avoid applying for multiple credit products at once.`;
+  }
 
-DISCOVERY BANK CONTEXT:
-- Shared-value banking: good financial behaviour = better rewards
-- Dynamic Interest Rate: 8.25% base, up to +2.5% for Platinum = 10.75% max
-- Vitality statuses: Blue → Bronze → Silver → Gold → Platinum
-- Platinum unlocks: 75% fuel cashback, 50% off flights, unlimited lounge, 20% food cashback
-- To reach Platinum: 3,200 more pts via gym visits (300 pts), budget adherence (500 pts/month), on-time payments (200 pts/month)
-- Discovery Miles earned on all spend, redeemable for flights/Uber/shopping
+  // Interest rate
+  if (q.match(/interest|rate|saving.*rate|dynamic/)) {
+    return `Your Savings Account earns a **Dynamic Interest Rate of 8.25% p.a.** Discovery's base rate is 8.25%, but Gold and Platinum members earn up to **+2.5% bonus** — potentially **10.75% p.a.** That extra 2.5% on your R ${fmt(ACCOUNT_DATA.accounts.savings.balance)} would be an extra **R ${fmt(ACCOUNT_DATA.accounts.savings.balance * 0.025 / 12)}/month** in interest!`;
+  }
 
-ROLE: Professional, warm Discovery Bank tone. Use Rand (R). Cite specific numbers. Suggest Vitality/Miles naturally. Keep responses 3-6 sentences. Never invent data not listed above.`;
+  // Transactions
+  if (q.match(/recent|transaction|latest|history/)) {
+    return `Your most recent transactions: **Today** — Woolworths Food -R820, Uber -R145. **Yesterday** — Salary +R38,000 🎉, Nu Metro -R220. **Monday** — Shell Petrol -R680, Vitality Cashback +R340. Head to the Transactions tab for your full history.`;
+  }
+  if (q.match(/salary|income|pay/)) {
+    return `Your monthly salary of **R ${fmt(ACCOUNT_DATA.monthlyIncome)}** was deposited yesterday into your Transaction Account ****3841. With a savings rate of **${ACCOUNT_DATA.savingsRate}%**, you're saving **R ${fmt(ACCOUNT_DATA.monthlyIncome * ACCOUNT_DATA.savingsRate / 100)}/month** — above the recommended 20% target. Well done!`;
+  }
+
+  // Miles
+  if (q.match(/miles|discovery miles|redeem/)) {
+    return `Discovery Miles are earned on every purchase with your Discovery card and can be redeemed for flights ✈️, Uber trips 🚗, shopping at partner stores, and more. Check the Rewards section in the app to see your current Miles balance and available redemptions.`;
+  }
+
+  // Transfer
+  if (q.match(/transfer|send money|pay/)) {
+    return `You can transfer money quickly using the **Transfer tab** (the arrows icon in the nav). You have saved beneficiaries ready to go. Transfers between your own Discovery accounts are instant and free.`;
+  }
+
+  // General help
+  if (q.match(/help|what can|hi|hello|hey/)) {
+    return `Hi ${name}! 👋 I'm your Discovery Bank assistant. I can help you with:\n• Account balances & transactions\n• Spending breakdown & budget\n• Vitality status & rewards\n• Credit score tips\n• Interest rates\n• How to reach Platinum\n\nJust ask me anything!`;
+  }
+
+  // Fallback
+  const fallbacks = [
+    `Great question, ${name}! Based on your account data, I'd recommend checking the relevant tab for more detail. I can answer questions about your balances, spending, Vitality rewards, credit score, or how to reach Platinum status.`,
+    `I can see your full financial picture — ask me about your balance, spending this month, Vitality points, credit score, or your rewards. What would you like to know?`,
+    `I'm here to help with your Discovery Bank account! Try asking: "What's my balance?", "How do I reach Platinum?", or "What are my rewards?"`,
+  ];
+  return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+}
 
 // ══════════════════════════════════════════════
 // NAVIGATION & SCREENS
@@ -1196,23 +1271,35 @@ function signupSubmit() {
 // LOGIN
 // ══════════════════════════════════════════════
 function doLogin() {
-  const un = document.getElementById('login-username').value.trim();
-  const pw = document.getElementById('login-password').value.trim();
+  const un  = document.getElementById('login-username').value.trim();
+  const pw  = document.getElementById('login-password').value.trim();
   const err = document.getElementById('login-error');
   err.classList.remove('show');
   if (!un || !pw) { err.textContent = 'Please enter your username and password.'; err.classList.add('show'); return; }
+
   const btn = document.getElementById('login-btn');
   btn.disabled = true; btn.textContent = 'Signing in…';
+
+  // Build display name from username
+  // e.g. "lethabo.sithole" → "Lethabo Sithole"
+  //      "john"            → "John"
+  const displayName = un
+    .replace(/[._-]/g, ' ')
+    .split(' ')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+    .join(' ');
+  const initials = displayName.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+
   setTimeout(() => {
     btn.disabled = false; btn.textContent = 'Sign In Securely';
-    launchApp('Lethabo Sithole', 'LS');
+    launchApp(displayName, initials);
   }, 900);
 }
 
 function doDemoLogin() {
   const btn = document.getElementById('login-btn');
   btn.disabled = true;
-  setTimeout(() => { btn.disabled = false; launchApp('Lethabo Sithole', 'LS'); }, 600);
+  setTimeout(() => { btn.disabled = false; launchApp('Demo User', 'DU'); }, 600);
 }
 
 function doLogout() {
@@ -1225,8 +1312,10 @@ function doLogout() {
 // APP LAUNCH
 // ══════════════════════════════════════════════
 function launchApp(name, initials) {
-    document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
-  document.getElementById('app').classList.remove('hidden');
+  // Update the global account data with the real user's name
+  ACCOUNT_DATA.user.name     = name;
+  ACCOUNT_DATA.user.initials = initials;
+
   document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('util-name').textContent = name;
@@ -1486,14 +1575,13 @@ function renderVitality() {
 }
 
 // ══════════════════════════════════════════════
-// CHAT — POWERED BY GROQ (llama-3.3-70b)
-// Get a FREE key at: https://console.groq.com
+
+
 // ══════════════════════════════════════════════
 let chatHistory = [];
 let chatTyping = false;
 
-// API key is stored in .env on the server — never in the browser.
-// See server.py and .env.example for setup instructions.
+// ── Rule-based assistant — no API key needed, fully offline ──
 
 function makeWelcomeCard(firstName) {
   const card = document.createElement('div');
@@ -1550,49 +1638,13 @@ async function sendMessage() {
   document.getElementById('send-btn').disabled = true;
   showTypingIndicator();
 
-  try {
-    // ── Calls our Flask server proxy (/api/chat)
-    // The server holds the Groq API key — never exposed in the browser
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        system: SYSTEM_PROMPT,
-        messages: chatHistory,
-        temperature: 0.7,
-        max_tokens: 1024
-      })
-    });
+  // Simulate thinking delay (0.6–1.2s) then reply with rule-based bot
+  await new Promise(r => setTimeout(r, 600 + Math.random() * 600));
+  removeTypingIndicator();
 
-    const data = await res.json();
-    removeTypingIndicator();
-
-    // Handle server / Groq errors
-    if (!res.ok || data.error) {
-      const msg = data.error || 'Unknown error';
-      if (res.status === 401) {
-        appendMsg('❌ Invalid Groq API key on the server. Check your .env file.', 'bot');
-      } else if (res.status === 429) {
-        appendMsg('⏳ Rate limit reached. Please wait a moment and try again.', 'bot');
-      } else if (res.status === 500) {
-        appendMsg('❌ Server error: ' + msg, 'bot');
-      } else {
-        appendMsg('❌ Error: ' + msg, 'bot');
-      }
-      chatTyping = false;
-      document.getElementById('send-btn').disabled = false;
-      return;
-    }
-
-    const reply = data.reply || "I couldn't process that. Please try again.";
-    chatHistory.push({ role: 'assistant', content: reply });
-    appendMsg(reply, 'bot');
-
-  } catch (err) {
-    removeTypingIndicator();
-    console.error('Chat error:', err);
-    appendMsg('❌ Cannot reach the server. Make sure server.py is running (python server.py).', 'bot');
-  }
+  const reply = getBotReply(text);
+  chatHistory.push({ role: 'assistant', content: reply });
+  appendMsg(reply, 'bot');
 
   chatTyping = false;
   document.getElementById('send-btn').disabled = false;
